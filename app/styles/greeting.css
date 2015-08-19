@@ -80,6 +80,7 @@ main {
 input,
 input:focus {
   color: #000;
+  text-align: center;
 }
 
 button[type="submit"] {
