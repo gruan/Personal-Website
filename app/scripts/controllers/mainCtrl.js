@@ -24,7 +24,7 @@
        */
       function submitName() {
         $scope.name = $scope.name || 'Anonymous';
-        $location.path('main');
+        $location.path('home');
       }
 
       /**

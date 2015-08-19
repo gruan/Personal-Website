@@ -51,14 +51,12 @@
  }
 
  /* ============= CONTAINERS ============= */
-.container-fluid {
-  padding: 0;
-}
 
 .container-fluid,
 #greeting,
 main {
   height: 100%;
+  padding: 0;
 }
 
 #greeting {

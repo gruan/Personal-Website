@@ -15,7 +15,7 @@
           templateUrl: 'views/greeting.html',
           controller: 'MainCtrl'
         })
-        .when('/main', {
+        .when('/home', {
           templateUrl: 'views/home.html',
           controller: 'MainCtrl'
         })
