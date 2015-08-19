@@ -1,3 +1,9 @@
+/**
+ * Created by George Ruan on August 18, 2015.
+ *
+ * Defines the routing behavior for the web application.
+ */
+
 (function() {
   'use strict';
 
@@ -6,8 +12,8 @@
     .config(function($routeProvider) {
       $routeProvider
         .when('/', {
-          templateUrl: 'views/hello.html',
-          controller: 'HelloCtrl'
+          templateUrl: 'views/greeting.html',
+          controller: 'GreetingCtrl'
         })
         .when('/main', {
           templateUrl: 'views/main.html'
