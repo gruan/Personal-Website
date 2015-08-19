@@ -1,5 +1,17 @@
 <div id="greeting" class="text-center">
-    <div class="row">
-        <h1>Hello</h1>
+    <div class="center">
+        <div class="row" ng-show="greeting">
+            <h1 class="fade-in-out megatext">{{greeting}}</h1>
+        </div>
+        <div class="row" ng-hide="greeting">
+            <form ng-submit="submitName()">
+                <div class="form-group">
+                    <label for="name" ng-hide="true">Name</label>
+                    <input type="text" class="form-control" id="name"
+                           ng-model="name"></input>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
     </div>
 </div>

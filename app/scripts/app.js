@@ -13,10 +13,11 @@
       $routeProvider
         .when('/', {
           templateUrl: 'views/greeting.html',
-          controller: 'GreetingCtrl'
+          controller: 'MainCtrl'
         })
         .when('/main', {
-          templateUrl: 'views/main.html'
+          templateUrl: 'views/main.html',
+          controller: 'MainCtrl'
         })
         .when('/404', {
           templateUrl: '404.html'
