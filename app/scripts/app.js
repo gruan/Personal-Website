@@ -13,7 +13,7 @@
       $routeProvider
         .when('/', {
           templateUrl: 'views/greeting.html',
-          controller: 'MainCtrl'
+          controller: 'GreetingCtrl'
         })
         .when('/home', {
           templateUrl: 'views/home.html',

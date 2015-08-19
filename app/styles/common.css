@@ -4,15 +4,33 @@
  * Stylesheet for common styles.
  */
 
+/* ============= TEXT ============= */
+.button-text {
+  font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 100;
+}
+
+/* ============= PLACEMENT ============= */
 .no-padding {
   padding: 0;
 }
 
-.full-screen {
-  height: 100%;
+/* ============= COLOR SCHEMES ============= */
+
+.dark-background,
+.medium-background {
+  color: #fff;
 }
 
-.button-text {
-  font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: 100;
+.dark-background {
+  background-color: #000;
+}
+
+.medium-background {
+  background-color: #666;
+}
+
+.light-background {
+  background-color: #fff;
+  color: #000;
 }

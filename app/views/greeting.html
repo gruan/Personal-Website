@@ -7,7 +7,7 @@
             <div class="row" ng-if="!greeting">
                 <form ng-submit="submitName()">
                     <label for="name" ng-hide="true">Name</label>
-                    <input type="text" class="fade-in megatext underline-input" id="name" autocomplete="off" ng-model="name"></input>
+                    <input type="text" class="fade-in megatext underline-input" id="name" autocomplete="off" ng-model="$parent.name"></input>
 
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>

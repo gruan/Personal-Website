@@ -8,35 +8,7 @@
   'use strict';
 
   angular.module('georgeRuan')
-    .controller('MainCtrl', function($scope, $location, $interval) {
-      var greetingsArr = ['Hello.', 'What\'s Your Name?', ''];
-      var greetingsCount = 0;
-      var greetingsDelay = 5000;        // in .fade-in-out (duration + delay) * 1000
-      $scope.greeting = greetingsArr[0];
-
-      $scope.name = '';
-
-      $scope.submitName = submitName;
-
-      /**
-       * Changes partial to main page
-       * @return {void}
-       */
-      function submitName() {
-        $scope.name = $scope.name || 'Anonymous';
-        $location.path('home');
-      }
-
-      /**
-       * Sets the greeting to the next possible one.
-       * @return {void}
-       */
-      function nextGreeting() {
-        if(greetingsCount < greetingsArr.length) {
-          $scope.greeting = greetingsArr[++greetingsCount];
-        }
-      }
-
-      $interval(nextGreeting, greetingsDelay, greetingsArr.length - 1);
+    .controller('MainCtrl', function($scope, userData) {
+      $scope.name = userData.getName();
     });
 })();
