@@ -1,15 +1,14 @@
 <div id="greeting" class="text-center">
     <div class="center">
-        <div class="row" ng-show="greeting">
-            <h1 class="fade-in-out megatext">{{greeting}}</h1>
+        <div class="row" ng-if="greeting">
+            <h1 class="fade-in-out transparent megatext">{{greeting}}</h1>
         </div>
-        <div class="row" ng-show="!greeting">
+        <div class="row" ng-if="!greeting">
             <form ng-submit="submitName()">
-                <div class="form-group form-group-lg">
-                    <label for="name" ng-hide="true">Name</label>
-                    <input type="text" class="form-control fade-in" id="name"
-                           ng-model="name"></input>
-                </div>
+                <label for="name" ng-hide="true">Name</label>
+                <input type="text" class="fade-in megatext underline-input"
+                       id="name" autocomplete="off" ng-model="name"></input>
+
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>

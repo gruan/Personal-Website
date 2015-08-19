@@ -44,6 +44,9 @@
  /* ============= TEXT ============= */
  .megatext {
    font-size: 3.5em;
+ }
+
+ .transparent {
    opacity: 0;
  }
 
@@ -72,15 +75,31 @@ main {
   margin-left: -400px;
   margin-top: -50px;
   padding: 0 20px;
-/* border: 1px solid red;*/
+/*border: 1px solid red;*/
 }
 
  /* ============= FORMS ============= */
 
+form {
+  margin: 27px auto;
+}
+
 input,
 input:focus {
-  color: #000;
+  color: #fff;
   text-align: center;
+  background-color: #000;
+}
+
+input:focus {
+  outline: none;
+}
+
+.underline-input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: #fff;
 }
 
 button[type="submit"] {
