@@ -1,0 +1,14 @@
+/**
+ * Created on August 18, 2015 by George Ruan.
+ *
+ * Stylesheet for Greeting Page.
+ */
+#greeting {
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+}
+
+.h1 {
+  vertical-align: middle;
+}

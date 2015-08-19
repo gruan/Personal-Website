@@ -1,0 +1,18 @@
+/**
+ * Created on August 18, 2015 by George Ruan.
+ *
+ * Stylesheet for common styles.
+ */
+
+.no-padding {
+  padding: 0;
+}
+
+.full-screen {
+  height: 100%;
+}
+
+.button-text {
+  font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 100;
+}
