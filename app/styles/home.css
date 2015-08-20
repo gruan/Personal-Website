@@ -14,18 +14,10 @@
  }
 
  h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
-     text-transform: uppercase;
- }
-
- h1,
  h2 {
    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
    font-weight: 400;
+   text-transform: uppercase;
  }
 
  h3,
@@ -39,10 +31,20 @@
 
 header .container-content {
   padding: 20% 0 20% 5%;
+  position: relative;
 }
 
 .header-text {
   font-size: 5em;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 5% 0;
+}
+
+.subheader-text {
+  font-size: 2.5em;
+  margin: 5% 0;
+}
+
+.descriptive-text {
+  font-size: 1.5em;
+  margin: 2.5% 0;
 }
