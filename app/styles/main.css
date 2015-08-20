@@ -280,6 +280,8 @@ section .container-content {
 #contact::before {
   background-color:#000;
 }
+#about > .container-fluid {
+}
 
 @media(min-width:768px) {
 }
