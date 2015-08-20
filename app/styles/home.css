@@ -37,6 +37,12 @@
 
 /* ============= CONTAINERS ============= */
 
+header .container-content {
+  padding: 20% 0 20% 5%;
+}
+
 .header-text {
   font-size: 5em;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }

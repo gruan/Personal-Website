@@ -4,33 +4,82 @@
  * Stylesheet for common styles.
  */
 
-/* ============= TEXT ============= */
-.button-text {
-  font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: 100;
-}
-
 /* ============= PLACEMENT ============= */
+
 .no-padding {
   padding: 0;
 }
 
 /* ============= COLOR SCHEMES ============= */
 
-.dark-background,
-.medium-background {
+.dark-background, .medium-background {
   color: #fff;
 }
-
 .dark-background {
   background-color: #000;
 }
-
 .medium-background {
   background-color: #666;
 }
-
 .light-background {
   background-color: #fff;
   color: #000;
+}
+
+/* ============= BUTTONS ============= */
+
+.generic-btn {
+  border: none
+  background: none;
+  cursor: pointer;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 1em;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 2% 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.small-btn {
+  padding: 1.5em 2em;
+}
+.light-btn,
+.light-btn:link,
+.light-btn:visited {
+  border: 3px solid #fff;
+  color: #fff;
+}
+.light-btn:hover,
+.light-btn:active {
+  color: #000;
+  background: #fff;
+}
+.dark-btn,
+.dark-btn:link,
+.dark-btn:visited {
+  border: 3px solid #000;
+  color: #000;
+}
+.dark-btn:hover,
+.dark-btn:active {
+  color: #fff;
+  background: #000;
+}
+.light-btn,
+.light-btn:link,
+.light-btn:visited,
+.light-btn:hover,
+.light-btn:active,
+.dark-btn,
+.dark-btn:link,
+.dark-btn:visited,
+.dark-btn:hover,
+.dark-btn:active {
+  text-decoration: none;
 }

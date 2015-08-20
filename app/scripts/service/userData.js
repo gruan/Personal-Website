@@ -8,18 +8,21 @@
   'use strict';
   angular
     .module('georgeRuan')
-    .factory('userData', [function() {
-      var name = '';
+    .factory('userData', userData);
 
-      return {
-        getName: function () {
-          return name;
-        },
-        setName: function(userName) {
-          name = userName;
-          return name;
-        }
-      };
+  function userData() {
+    var name = '';
 
-    }]);
+    var userDataObj = {
+      getName: function() {
+        return name;
+      },
+      setName: function(userName) {
+        name = userName;
+        return name;
+      }
+    };
+
+    return userDataObj;
+  }
 })();
