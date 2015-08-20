@@ -39,9 +39,9 @@
 
  .fade-in,
  .fade-out {
-   -webkit-animation-duration: 2.5s;
-   -moz-animation-duration: 2.5s;
-   -ms-animation-duration: 2.5s;
+   -webkit-animation-duration: 2s;
+   -moz-animation-duration: 2s;
+   -ms-animation-duration: 2s;
  }
 
  .fade-in {
