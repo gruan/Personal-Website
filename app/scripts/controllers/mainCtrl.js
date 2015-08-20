@@ -1,14 +1,18 @@
 /**
  * Created by George Ruan on August 18, 2015.
  *
- * MainCtrl defines the behavior of the Greeting Page and Main Page.
+ * HomeCtrl defines the behavior of the Home Page.
  */
 
 (function() {
   'use strict';
 
   angular.module('georgeRuan')
-    .controller('MainCtrl', function($scope, userData) {
+    .controller('HomeCtrl', homeCtrl);
+
+    homeCtrl.$inject = ['$scope', 'userData'];
+
+    function homeCtrl ($scope, userData) {
       userData.getName().then(setName);
 
       /**
@@ -18,5 +22,5 @@
       function setName (name) {
         $scope.name = name;
       }
-    });
+    }
 })();

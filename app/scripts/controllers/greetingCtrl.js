@@ -8,7 +8,11 @@
   'use strict';
 
   angular.module('georgeRuan')
-    .controller('GreetingCtrl', function($scope, $location, $interval, userData) {
+    .controller('GreetingCtrl', greetingCtrl);
+
+    greetingCtrl.$inject = ['$scope', '$location', '$interval', 'userData'];
+
+    function greetingCtrl ($scope, $location, $interval, userData) {
       var greetingsArr = ['Hello.', 'What\'s Your Name?', ''];
       var greetingsCount = 0;
       var greetingsDelay = 5000;        // in .fade-in-out (duration + delay) * 1000
@@ -39,5 +43,5 @@
       }
 
       $interval(nextGreeting, greetingsDelay, greetingsArr.length - 1);
-    });
+    }
 })();

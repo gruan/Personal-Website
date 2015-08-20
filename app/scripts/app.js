@@ -17,7 +17,7 @@
         })
         .when('/home', {
           templateUrl: 'views/home.html',
-          controller: 'MainCtrl'
+          controller: 'HomeCtrl'
         })
         .when('/404', {
           templateUrl: '404.html'
