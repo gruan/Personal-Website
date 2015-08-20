@@ -9,6 +9,14 @@
 
   angular.module('georgeRuan')
     .controller('MainCtrl', function($scope, userData) {
-      $scope.name = userData.getName();
+      userData.getName().then(setName);
+
+      /**
+       * Sets the user's name.
+       * @param {String} name User's name.
+       */
+      function setName (name) {
+        $scope.name = name;
+      }
     });
 })();

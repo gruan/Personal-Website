@@ -14,7 +14,7 @@
       var greetingsDelay = 5000;        // in .fade-in-out (duration + delay) * 1000
       $scope.greeting = greetingsArr[0];
 
-      $scope.name = userData.getName();
+      $scope.name = '';
 
       $scope.submitName = submitName;
 
