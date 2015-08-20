@@ -8,7 +8,7 @@
   'use strict';
 
   angular
-    .module('georgeRuan', ['ngRoute'])
+    .module('georgeRuan', ['ngRoute'])    // Set up app dependencies
     .config(function($routeProvider) {
       $routeProvider
         .when('/', {
