@@ -29,16 +29,17 @@
 /* ============= BUTTONS ============= */
 
 .generic-btn {
-  border: none
+  border: none;
+  box-sizing: border-box;
   background: none;
   cursor: pointer;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 1em;
-  padding: 25px 80px;
   display: inline-block;
   margin: 2% 0;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 700;
   outline: none;
   position: relative;

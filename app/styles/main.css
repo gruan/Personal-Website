@@ -248,7 +248,6 @@ fieldset[disabled] .btn-xl.active {
 }
 
 section {
-  padding: 0 0 20% 5%;
   position: relative;
 }
 
@@ -268,9 +267,17 @@ section:before {
   -ms-transform: skewY(4deg);
   transform: skewY(4deg)
 }
-
+section .container-content {
+  padding: 0 0 15% 5%;
+}
 #about::before {
   background-color: #fff;
+}
+#portfolio::before {
+  background-color: #666;
+}
+#contact::before {
+  background-color:#000;
 }
 
 @media(min-width:768px) {

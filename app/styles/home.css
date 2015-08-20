@@ -27,10 +27,25 @@
    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
  }
 
+ ul {
+   padding: 0;
+   margin: 0 0;
+ }
+ li {
+   display: inline;
+   margin: 0 1%;
+ }
+ li:first-child {
+   margin-left: 0;
+ }
+ li:last-child {
+   margin-right: 0;
+ }
+
 /* ============= CONTAINERS ============= */
 
 header .container-content {
-  padding: 20% 0 20% 5%;
+  padding: 20% 0 15% 5%;
   position: relative;
 }
 
