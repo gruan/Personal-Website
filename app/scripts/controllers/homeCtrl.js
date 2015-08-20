@@ -10,9 +10,9 @@
   angular.module('georgeRuan')
     .controller('HomeCtrl', homeCtrl);
 
-    homeCtrl.$inject = ['$scope', '$document', 'userData'];
+    homeCtrl.$inject = ['$scope', '$location', '$anchorScroll', 'userData'];
 
-    function homeCtrl ($scope, $document, userData) {
+    function homeCtrl ($scope, $location, $anchorScroll, userData) {
       userData.getName().then(setName);
 
       /**
@@ -21,6 +21,19 @@
        */
       function setName (name) {
         $scope.name = name;
+      }
+
+      $scope.scrollToId = scrollToId;
+
+      /**
+       * Scrolls to specified section of the page
+       * @param  {[type]} id The id of the section to scroll to.
+       * @return {String}    Section id
+       */
+      function scrollToId(id) {
+        $location.hash(id);
+        $anchorScroll();
+        return id;
       }
     }
 })();
