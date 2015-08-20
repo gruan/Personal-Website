@@ -49,6 +49,7 @@
 }
 .small-btn {
   padding: 1.5em 2em;
+  min-width: 175px;
 }
 .light-btn,
 .light-btn:link,

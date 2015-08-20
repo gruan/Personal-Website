@@ -33,7 +33,7 @@
  }
  li {
    display: inline;
-   margin: 0 1%;
+   margin: 0 .5%;
  }
  li:first-child {
    margin-left: 0;
