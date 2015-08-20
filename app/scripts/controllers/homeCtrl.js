@@ -10,9 +10,9 @@
   angular.module('georgeRuan')
     .controller('HomeCtrl', homeCtrl);
 
-    homeCtrl.$inject = ['$scope', 'userData'];
+    homeCtrl.$inject = ['$scope', '$document', 'userData'];
 
-    function homeCtrl ($scope, userData) {
+    function homeCtrl ($scope, $document, userData) {
       userData.getName().then(setName);
 
       /**
