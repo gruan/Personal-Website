@@ -268,7 +268,8 @@ section:before {
   transform: skewY(4deg)
 }
 section .container-content {
-  padding: 0 0 15% 5%;
+  margin: 0 0 15% 5%;
+  position: relative;
 }
 #about::before {
   background-color: #fff;
@@ -780,24 +781,6 @@ ul.social-buttons li a:active {
 .old-portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
-}
-
-::-moz-selection {
-    text-shadow: none;
-    background: #fed136;
-}
-
-::selection {
-    text-shadow: none;
-    background: #fed136;
-}
-
-img::selection {
-    background: 0 0;
-}
-
-img::-moz-selection {
-    background: 0 0;
 }
 
 body {
