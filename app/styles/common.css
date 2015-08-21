@@ -53,12 +53,17 @@
 
  .nav-icon {
    color: #00CCB0;
-   font-size: 2em;
+   font-size: 1.5em;
    transition: color .2s linear;
  }
 
  .nav-icon:hover {
    color: #007A6A;
+ }
+
+ .hidden-text {
+   display: inline-block;
+   text-indent: -9999px;
  }
 
 /* ============= PLACEMENT ============= */
