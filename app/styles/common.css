@@ -42,7 +42,7 @@
    border-bottom: none;
    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
    font-weight: 400;
-   font-size: 1em;
+   font-size: 1.1em;
    text-transform: uppercase;
    transition: color .3s linear;
  }
@@ -51,13 +51,23 @@
    color: #666;
  }
 
+ .nav-icon {
+   color: #00CCB0;
+   font-size: 2em;
+   transition: color .2s linear;
+ }
+
+ .nav-icon:hover {
+   color: #007A6A;
+ }
+
 /* ============= PLACEMENT ============= */
 
 .no-padding {
   padding: 0;
 }
 
-.table {
+.container-table {
   display: table;
   height:100%;
   width: 100%;
