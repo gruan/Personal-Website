@@ -49,18 +49,18 @@ a:active {
 
 /* ============= NAVBAR ============= */
 nav {
-  border-right: 3px solid #00CCB0;
+  border-left: 3px solid #00CCB0;
   background-color: #222;
   position: fixed;
   top: 0;
-  left: -277px;
-  transition: left .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  right: -277px;
+  transition: right .5s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 280px;
   z-index: 1;
 }
 
 nav:hover {
-  left: 0;
+  right: 0;
 }
 
 .container-bottom {
@@ -76,7 +76,7 @@ nav:hover {
   padding: 0 3px 0 10px;
   position: absolute;
   top: 0;
-  right: -20px;
+  left: -20px;
   bottom: 0;
 }
 
@@ -119,6 +119,10 @@ nav li.inline-list-item:last-child {
 .nav-icon:hover,
 .nav-icon:active {
   color: #007A6A;
+}
+
+.table-cell-center > li {
+  margin-bottom: 5px;
 }
 
 /* ============= HEADER ============= */
