@@ -4,26 +4,68 @@
  * Stylesheet for common styles.
  */
 
+ /* ============= COLOR SCHEMES ============= */
+
+ .dark-background,
+ .medium-background,
+ .nav-text {
+   color: #fff;
+ }
+ .dark-background {
+   background-color: #000;
+ }
+ .medium-background {
+   background-color: #666;
+ }
+ .light-background {
+   background-color: #fff;
+   color: #000;
+ }
+
+/* ============= TEXT ============= */
+ .header-text {
+   font-size: 5em;
+   margin: 5% 0;
+ }
+
+ .subheader-text {
+   font-size: 2.5em;
+   margin: 5% 0;
+ }
+
+ .descriptive-text {
+   font-size: 1.5em;
+   margin: 2.5% 0;
+ }
+
+ .nav-text {
+   border-bottom: none;
+   font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+   font-weight: 400;
+   font-size: 1em;
+   text-transform: uppercase;
+   transition: color .3s linear;
+ }
+
+ .nav-text:hover {
+   color: #666;
+ }
+
 /* ============= PLACEMENT ============= */
 
 .no-padding {
   padding: 0;
 }
 
-/* ============= COLOR SCHEMES ============= */
+.table {
+  display: table;
+  height:100%;
+  width: 100%;
+}
 
-.dark-background, .medium-background {
-  color: #fff;
-}
-.dark-background {
-  background-color: #000;
-}
-.medium-background {
-  background-color: #666;
-}
-.light-background {
-  background-color: #fff;
-  color: #000;
+.table-cell-center {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* ============= BUTTONS ============= */

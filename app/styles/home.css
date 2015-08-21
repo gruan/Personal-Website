@@ -28,38 +28,45 @@
  }
 
  ul {
+   list-style-type: none;
    padding: 0;
    margin: 0 0;
  }
- li {
+ li.inline-list-item {
    display: inline;
    margin: 0 .5%;
  }
- li:first-child {
+ li.inliine-list-item:first-child {
    margin-left: 0;
  }
- li:last-child {
+ li.inline-list-item:last-child {
    margin-right: 0;
  }
+
+ a,
+ a:link,
+ a:visited,
+ a:hover,
+ a:active {
+   color: inherit;
+   text-decoration: none;
+   border-bottom: none;
+ }
+
+/* ============= NAVBAR ============= */
+nav {
+  border-right: 3px solid #00CCB0;
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  z-index: 1;
+}
 
 /* ============= CONTAINERS ============= */
 
 header .container-content {
   margin: 20% 0 15% 5%;
   position: relative;
-}
-
-.header-text {
-  font-size: 5em;
-  margin: 5% 0;
-}
-
-.subheader-text {
-  font-size: 2.5em;
-  margin: 5% 0;
-}
-
-.descriptive-text {
-  font-size: 1.5em;
-  margin: 2.5% 0;
 }

@@ -69,7 +69,8 @@
 
 .container-fluid,
 #greeting,
-main {
+main,
+nav {
   height: 100%;
   padding: 0;
 }
@@ -78,18 +79,6 @@ main {
   background-color: #000;
   color: #fff;
   position: relative;
-}
-
-.center {
-  position: absolute;
-  width: 800px;
-  height: 100px;
-  top: 50%;
-  left: 50%;
-  margin-left: -400px;
-  margin-top: -50px;
-  padding: 0 20px;
-/*border: 1px solid red;*/
 }
 
  /* ============= FORMS ============= */
