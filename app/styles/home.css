@@ -6,6 +6,10 @@
 
 /* ============= GLOBALS ============= */
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html,
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

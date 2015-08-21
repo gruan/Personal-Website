@@ -10,7 +10,9 @@
   angular.module('georgeRuan')
     .directive('grNavBar', navBar);
 
-  function navBar() {
+  navBar.$inject = ['$timeout'];
+
+  function navBar($timeout) {
     var directive;
     directive = {
       link: link,
@@ -21,36 +23,54 @@
     return directive;
 
     function link() {
-      var navBarElement = angular.element(document.getElementsByTagName('nav'));
-      var navRollOverElement = angular.element(document.getElementsByClassName('nav-rollover'));
+      // Constants
+      var SLIDE_IN_POSITION = 0,
+          SLIDE_OUT_POSITION = -277,
+          OPACITY_IN = 0,
+          OPACITY_OUT = 1;
+
+      var navBarElement = angular.element(document.getElementsByTagName('nav')),
+          navRollOverElement = angular.element(document.getElementsByClassName('nav-rollover'));
 
       navBarElement.hover(slideInNavBar, slideOutNavBar);
 
+      /**
+       * Wrapper function for slideNavBar. Sliding the navbar into the screen.
+       * @return {Void}
+       */
       function slideInNavBar() {
-        slideNavBar(0, 0);
+        slideNavBar(SLIDE_IN_POSITION, OPACITY_IN);
       }
 
+      /**
+       * Wrapper function for slideNavBar. Sliding the navbar out of the screen.
+       * @return {Void}
+       */
       function slideOutNavBar() {
-        slideNavBar(-277, 1);
+        slideNavBar(SLIDE_OUT_POSITION, OPACITY_OUT);
       }
 
+      /**
+       * Slides the navbar in and out and makes the nav-rollover button appear
+       * and disappear.
+       * @param  {Integer} rightVal   The value for the navbar's right position.
+       * @param  {Integer} opacityVal The value for the nav-rollover's opacity.
+       * @return {Void}
+       */
       function slideNavBar (rightVal, opacityVal) {
-        var navBarOptions = {
-          css: {
-            right: rightVal
-          },
-          duration: 300,
-          ease: 'easeInOutCubic'
-        },
-        navRolloverOptions = {
-          css: {
-            opacity: opacityVal
-          },
-          duration: 500,
-          ease: 'easeInCubic'
-        };
-        navBarElement.animate(navBarOptions.css, navBarOptions.duration, navBarOptions.ease);
-        navRollOverElement.animate(navRolloverOptions.css, navRolloverOptions.duration, navRolloverOptions.ease);
+        var NAVBAR_CSS = {right: rightVal},
+            NAVROLLOVER_CSS = {opacity: opacityVal},
+            NAVBAR_DURATION = 300,
+            NAVROLLOVER_DURATION = 500,
+            NAVBAR_EASE = 'easeInOutCubic',
+            NAVROLLOVER_EASE = 'linear',
+            NAVROLLOVER_DELAY;
+
+        navBarElement.animate(NAVBAR_CSS, NAVBAR_DURATION, NAVBAR_EASE);
+
+        $timeout(function() {
+          navRollOverElement.animate(NAVROLLOVER_CSS, NAVROLLOVER_DURATION, NAVROLLOVER_EASE);
+        }, 0);
       }
     }
   }
