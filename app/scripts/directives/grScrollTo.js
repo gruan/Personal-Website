@@ -27,12 +27,15 @@
       element.click(smoothScroll);
 
       function smoothScroll() {
-        var cssProperties = {
-          scrollTop: angular.element(document.getElementById(scope.id))[0].offsetTop
-        };
+        var targetY = angular.element(document.getElementById(scope.id))[0].offsetTop;
         var duration = 1500;
 
-        angular.element('html, body').animate(cssProperties, duration, 'easeInOutExpo');
+        if(navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+          window.scrollTo(0, targetY);
+        }
+        else {
+          angular.element('html, body').animate({scrollTop: targetY}, duration, 'easeInOutExpo');
+        }
       }
     }
   }
