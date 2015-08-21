@@ -59,10 +59,6 @@ nav {
   z-index: 1;
 }
 
-nav:hover {
-  right: 0;
-}
-
 .container-bottom {
   padding: 20% 20%;
   position: absolute;
@@ -73,6 +69,7 @@ nav:hover {
 
 .nav-rollover {
   color: #00CCB0;
+  opacity: 1;
   padding: 0 3px 0 10px;
   position: absolute;
   top: 0;
