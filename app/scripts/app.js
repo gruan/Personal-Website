@@ -8,7 +8,7 @@
   'use strict';
 
   angular
-    .module('georgeRuan', ['ngRoute', 'duScroll'])    // Set up app dependencies
+    .module('georgeRuan', ['ngRoute'])    // Set up app dependencies
     .config(function($routeProvider) {
       $routeProvider
         .when('/', {
