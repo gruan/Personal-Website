@@ -23,6 +23,7 @@
     return directive;
 
     function link(scope, element) {
+      var scrollElement = angular.element('html, body');
 
       element.click(smoothScroll);
 
@@ -34,7 +35,7 @@
           window.scrollTo(0, targetY);
         }
         else {
-          angular.element('html, body').animate({scrollTop: targetY}, duration, 'easeInOutExpo');
+          scrollElement.stop().animate({scrollTop: targetY}, duration, 'easeInOutExpo');
         }
       }
     }
