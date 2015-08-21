@@ -27,6 +27,10 @@
 
       element.click(smoothScroll);
 
+      /**
+       * Smooth scrolls to the target id.
+       * @return {Void}
+       */
       function smoothScroll() {
         var targetY = angular.element(document.getElementById(scope.id))[0].offsetTop;
         var duration = 1500;
