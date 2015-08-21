@@ -8,7 +8,8 @@
 
  .dark-background,
  .medium-background,
- .nav-text {
+ .nav-text,
+ .nav-text:visited {
    color: #fff;
  }
  .dark-background {
@@ -36,29 +37,6 @@
  .descriptive-text {
    font-size: 1.5em;
    margin: 2.5% 0;
- }
-
- .nav-text {
-   border-bottom: none;
-   font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
-   font-weight: 400;
-   font-size: 1.1em;
-   text-transform: uppercase;
-   transition: color .3s linear;
- }
-
- .nav-text:hover {
-   color: #666;
- }
-
- .nav-icon {
-   color: #00CCB0;
-   font-size: 1.5em;
-   transition: color .2s linear;
- }
-
- .nav-icon:hover {
-   color: #007A6A;
  }
 
  .hidden-text {

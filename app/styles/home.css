@@ -44,7 +44,6 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -89,6 +88,31 @@ nav li.inline-list-item:first-child {
 }
 nav li.inline-list-item:last-child {
   margin-right: 0;
+}
+
+.nav-text {
+  border-bottom: none;
+  font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  transition: color .3s linear;
+}
+
+.nav-text:link,
+.nav-text:hover,
+.nav-text:active {
+  color: #666;
+}
+
+.nav-icon {
+  color: #00CCB0;
+  font-size: 1.5em;
+  transition: color .2s linear;
+}
+
+.nav-icon:hover {
+  color: #007A6A;
 }
 
 /* ============= HEADER ============= */
