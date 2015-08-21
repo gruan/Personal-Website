@@ -106,12 +106,18 @@ nav li.inline-list-item:last-child {
 }
 
 .nav-icon {
-  color: #00CCB0;
   font-size: 1.5em;
   transition: color .2s linear;
 }
 
-.nav-icon:hover {
+.nav-icon,
+.nav-icon:visited {
+  color: #00CCB0;
+}
+
+.nav-icon:link,
+.nav-icon:hover,
+.nav-icon:active {
   color: #007A6A;
 }
 
