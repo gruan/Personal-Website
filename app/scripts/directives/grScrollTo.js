@@ -2,6 +2,11 @@
  * Created by George Ruan on August 20, 2015.
  *
  * grScrollTo defines button scrolling functionality.
+ *
+ * To use: set this directive as an attribute and set the value to the string
+ * of the target element's id.
+ *
+ * Ex. <button gr-scroll-to="'home'"> to scroll to the home section.
  */
 
 (function() {

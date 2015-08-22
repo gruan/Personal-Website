@@ -2,6 +2,11 @@
  * Created by George Ruan on August 21, 2015.
  *
  * grNavBar defines the navigation bar appearance and functionality.
+ *
+ * To use: Put the directive into the html file.
+ *
+ * Ex. <gr-nav-bar></gr-nav-bar>
+ *
  */
 
 (function() {
