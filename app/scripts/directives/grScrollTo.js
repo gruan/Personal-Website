@@ -32,6 +32,8 @@
        * @return {Void}
        */
       function smoothScroll() {
+        disableMouseScroll();
+
         var targetY = angular.element(document.getElementById(scope.id))[0].offsetTop;
         var duration = 1500;
 
@@ -39,7 +41,25 @@
           window.scrollTo(0, targetY);
         }
         else {
-          scrollElement.stop().animate({scrollTop: targetY}, duration, 'easeInOutExpo');
+          scrollElement.stop().animate({scrollTop: targetY}, duration, 'easeInOutExpo', reenableMouseScroll);
+        }
+
+        /**
+         * Disables mouse scrolling functionality.
+         * @return {Void}
+         */
+        function disableMouseScroll() {
+          angular.element(window).on('mousewheel', function(event) {
+            event.preventDefault();
+          });
+        }
+
+        /**
+         * Re-enables mouse scrolling functionality.
+         * @return {Void}
+         */
+        function reenableMouseScroll() {
+          angular.element(window).unbind('mousewheel');
         }
       }
     }
