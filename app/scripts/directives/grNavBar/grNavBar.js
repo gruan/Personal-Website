@@ -7,6 +7,7 @@
  *
  * Ex. <gr-nav-bar></gr-nav-bar>
  *
+ * This will create a navigation bar with slide in and out functionality.
  */
 
 (function() {

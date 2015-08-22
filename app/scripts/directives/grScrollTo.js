@@ -6,7 +6,9 @@
  * To use: set this directive as an attribute and set the value to the string
  * of the target element's id.
  *
- * Ex. <button gr-scroll-to="'home'"> to scroll to the home section.
+ * Ex. <button gr-scroll-to="'home'">
+ *
+ * This will create a button that when clicked will scroll to the home section.
  */
 
 (function() {
