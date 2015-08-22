@@ -4,98 +4,25 @@
  * Stylesheet for Greeting Page.
  */
 
-/* ============= ANIMATIONS ============= */
- @keyframes fade-in-out {
-   0% {opacity: 0;}
-   40% {opacity: 1;}
-   60% {opacity: 1;}
-   100% {opacity: 0;}
- }
-
- @keyframes fade-in {
-   0% {opacity: 0}
-   100% {opacity: 1}
- }
-
- @keyframes fade-out {
-   0% {opacity: 1}
-   100% {opacity: 0}
- }
-
- .fade-in-out {
-   -webkit-animation-name: fade-in-out;
-   -webkit-animation-duration: 4s;
-   -webkit-animation-delay: 1s;
-   -webkit-animation-iteration-count: 2;
-   -moz-animation-name: fade-in-out;
-   -moz-animation-duration: 4s;
-   -moz-animation-delay: 1s;
-   -moz-animation-iteration-count: 2;
-   -ms-animation-name: fade-in-out;
-   -ms-animation-duration: 4s;
-   -ms-animation-delay: 1s;
-   -ms-animation-iteration-count: 2;
- }
-
- .fade-in,
- .fade-out {
-   -webkit-animation-duration: 2s;
-   -moz-animation-duration: 2s;
-   -ms-animation-duration: 2s;
- }
-
- .fade-in {
-   -webkit-animation-name: fade-in;
-   -moz-animation-name: fade-in;
-   -ms-animation-name: fade-in;
- }
-
- .fade-out {
-   -webkit-animation-name: fade-out;
-   -moz-animation-name: fade-out;
-   -ms-animation-name: fade-out;
- }
-
- /* ============= TEXT ============= */
- .megatext {
-   font-size: 3.5em;
- }
-
- .transparent {
-   opacity: 0;
- }
-
  /* ============= CONTAINERS ============= */
 
-.container-fluid,
-#greeting,
-main,
-nav {
-  height: 100%;
-  padding: 0;
-}
-
 #greeting {
-  background-color: #000;
-  color: #fff;
-  position: relative;
+  height: 100%;
 }
 
- /* ============= FORMS ============= */
+ /* ============= TEXT ============= */
 
-form {
-  margin: 27px auto;
+.greeting-text{
+  font-size: 3.5em;
 }
 
-input,
-input:focus {
+ /* ============= FORM ============= */
+
+#greeting input,
+#greeting input:focus {
   color: #fff;
   text-align: center;
   background-color: #000;
-}
-
-input:focus {
-  outline: none;
 }
 
 .underline-input {
@@ -105,7 +32,7 @@ input:focus {
   border-bottom-color: #fff;
 }
 
-button[type="submit"] {
+#greeting button[type="submit"] {
   position: absolute;
   left: -999999px;
   width: 1px;

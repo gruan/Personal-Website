@@ -4,54 +4,6 @@
  * Stylesheet for Home Page.
  */
 
-/* ============= GLOBALS ============= */
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-html,
-body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  height: 100%;
-  position: relative;
-}
-
-h1,
-h2 {
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0;
-}
-
-li.inline-list-item {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-a,
-a:link,
-a:visited,
-a:hover,
-a:active {
-  outline: none;
-  text-decoration: none;
-}
-
 /* ============= NAVBAR ============= */
 nav {
   border-left: 3px solid #00CCB0;
@@ -59,6 +11,7 @@ nav {
   position: fixed;
   top: 0;
   right: -277px;
+  bottom: 0;
   transition: right .5s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 280px;
   z-index: 1;
@@ -101,6 +54,11 @@ nav li.inline-list-item:last-child {
   transition: color .3s linear;
 }
 
+.nav-text,
+.nav-text:visited {
+  color: #fff;
+}
+
 .nav-text:link,
 .nav-text:hover,
 .nav-text:active {
@@ -113,11 +71,11 @@ nav li.inline-list-item:last-child {
 }
 
 .nav-icon,
+.nav-icon:link,
 .nav-icon:visited {
   color: #00CCB0;
 }
 
-.nav-icon:link,
 .nav-icon:hover,
 .nav-icon:active {
   color: #007A6A;
@@ -134,8 +92,52 @@ header .container-content {
   position: relative;
 }
 
-/* ============= CONTACT ============= */
+/* ============= SECTIONS ============= */
 
+section .container-content {
+  margin: 0 0 15% 5%;
+  position: relative;
+}
+
+/* ============= #HOME PAGE ============= */
+
+#home > section:before {
+  content: "";
+  width: 100%;
+  height: 0;
+  padding-bottom: 8%;
+  margin-top: -4%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-transform: skewY(4deg);
+  -moz-transform: skewY(4deg);
+  -o-transform: skewY(4deg);
+  -ms-transform: skewY(4deg);
+  transform: skewY(4deg)
+}
+
+/* ============= #ABOUT ============= */
+
+#about::before {
+  background-color: #fff;
+}
+
+#about > .container-fluid {
+}
+
+/* ============= #PORTFOLIO ============= */
+
+#portfolio::before {
+  background-color: #666;
+}
+
+/* ============= #CONTACT ============= */
+
+#contact::before {
+  background-color:#000;
+}
 #contact li.inline-list-item {
    margin: 0 .5%;
 }

@@ -4,12 +4,63 @@
  * Stylesheet for common styles.
  */
 
+ /* ============= ANIMATIONS ============= */
+
+  @keyframes fade-in-out {
+    0% {opacity: 0;}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+
+  @keyframes fade-in {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+
+  @keyframes fade-out {
+    0% {opacity: 1}
+    100% {opacity: 0}
+  }
+
+  .fade-in-out {
+    -webkit-animation-name: fade-in-out;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: 2;
+    -moz-animation-name: fade-in-out;
+    -moz-animation-duration: 4s;
+    -moz-animation-delay: 1s;
+    -moz-animation-iteration-count: 2;
+    -ms-animation-name: fade-in-out;
+    -ms-animation-duration: 4s;
+    -ms-animation-delay: 1s;
+    -ms-animation-iteration-count: 2;
+  }
+
+  .fade-in,
+  .fade-out {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+  }
+
+  .fade-in {
+    -webkit-animation-name: fade-in;
+    -moz-animation-name: fade-in;
+    -ms-animation-name: fade-in;
+  }
+
+  .fade-out {
+    -webkit-animation-name: fade-out;
+    -moz-animation-name: fade-out;
+    -ms-animation-name: fade-out;
+  }
+
  /* ============= COLOR SCHEMES ============= */
 
  .dark-background,
- .medium-background,
- .nav-text,
- .nav-text:visited {
+ .medium-background {
    color: #fff;
  }
  .dark-background {
@@ -23,7 +74,32 @@
    color: #000;
  }
 
+/* ============= CONTAINERS ============= */
+
+.container-table {
+  display: table;
+  height:100%;
+  width: 100%;
+}
+
+.table-cell-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* ============= PLACEMENT ============= */
+
+li.inline-list-item {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.no-padding {
+ padding: 0;
+}
+
 /* ============= TEXT ============= */
+
  .header-text {
    font-size: 5em;
    margin: 5% 0;
@@ -44,22 +120,9 @@
    text-indent: -9999px;
  }
 
-/* ============= PLACEMENT ============= */
-
-.no-padding {
-  padding: 0;
-}
-
-.container-table {
-  display: table;
-  height:100%;
-  width: 100%;
-}
-
-.table-cell-center {
-  display: table-cell;
-  vertical-align: middle;
-}
+ .transparent {
+   opacity: 0;
+ }
 
 /* ============= BUTTONS ============= */
 

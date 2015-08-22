@@ -1,55 +1,64 @@
-/*!
- * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+/**
+ * Created on August 21, 2015 by George Ruan.
  *
- * Stylesheet for the mainpage.
+ * Stylesheet for Globals.
  */
 
+ /* ============= GLOBALS ============= */
 
-p {
-    line-height: 1.75;
-}
+ ::-webkit-scrollbar {
+     display: none;
+ }
 
-section {
-  position: relative;
-}
+ html,
+ body {
+   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 16px;
+   height: 100%;
+   position: relative;
+ }
 
-section:before {
-  content: "";
-  width: 100%;
-  height: 0;
-  padding-bottom: 8%;
-  margin-top: -4%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  -webkit-transform: skewY(4deg);
-  -moz-transform: skewY(4deg);
-  -o-transform: skewY(4deg);
-  -ms-transform: skewY(4deg);
-  transform: skewY(4deg)
-}
-section .container-content {
-  margin: 0 0 15% 5%;
-  position: relative;
-}
-#about::before {
-  background-color: #fff;
-}
-#portfolio::before {
-  background-color: #666;
-}
-#contact::before {
-  background-color:#000;
-}
-#about > .container-fluid {
-}
+ h1 {
+   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   text-transform: uppercase;
+ }
 
-@media(min-width:768px) {
-}
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
 
-body {
-    webkit-tap-highlight-color: #fed136;
-}
+ p {
+     line-height: 1.75;
+ }
+
+ section {
+   position: relative;
+ }
+
+ ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0 0;
+ }
+
+ a,
+ a:link,
+ a:visited,
+ a:hover,
+ a:active {
+   outline: none;
+   text-decoration: none;
+ }
+
+ input:focus {
+   outline: none;
+ }
+
+ body > div {
+   height: 100%;
+ }

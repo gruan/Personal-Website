@@ -70,7 +70,7 @@
 
         $timeout(function() {
           navRollOverElement.animate(NAVROLLOVER_CSS, NAVROLLOVER_DURATION, NAVROLLOVER_EASE);
-        }, 0);
+        }, NAVROLLOVER_DELAY);
       }
     }
   }
