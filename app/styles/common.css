@@ -6,73 +6,91 @@
 
  /* ============= ANIMATIONS ============= */
 
-  @keyframes fade-in-out {
-    0% {opacity: 0;}
-    40% {opacity: 1;}
-    60% {opacity: 1;}
-    100% {opacity: 0;}
-  }
+@keyframes fade-in-out {
+  0% {opacity: 0;}
+  40% {opacity: 1;}
+  60% {opacity: 1;}
+  100% {opacity: 0;}
+}
 
-  @keyframes fade-in {
-    0% {opacity: 0}
-    100% {opacity: 1}
-  }
+@keyframes fade-in {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
 
-  @keyframes fade-out {
-    0% {opacity: 1}
-    100% {opacity: 0}
-  }
+@keyframes fade-out {
+  0% {opacity: 1}
+  100% {opacity: 0}
+}
 
-  .fade-in-out {
-    -webkit-animation-name: fade-in-out;
-    -webkit-animation-duration: 4s;
-    -webkit-animation-delay: 1s;
-    -webkit-animation-iteration-count: 2;
-    -moz-animation-name: fade-in-out;
-    -moz-animation-duration: 4s;
-    -moz-animation-delay: 1s;
-    -moz-animation-iteration-count: 2;
-    -ms-animation-name: fade-in-out;
-    -ms-animation-duration: 4s;
-    -ms-animation-delay: 1s;
-    -ms-animation-iteration-count: 2;
-  }
+.fade-in-out {
+  -webkit-animation-name: fade-in-out;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 2;
+  -moz-animation-name: fade-in-out;
+  -moz-animation-duration: 4s;
+  -moz-animation-delay: 1s;
+  -moz-animation-iteration-count: 2;
+  -ms-animation-name: fade-in-out;
+  -ms-animation-duration: 4s;
+  -ms-animation-delay: 1s;
+  -ms-animation-iteration-count: 2;
+}
 
-  .fade-in,
-  .fade-out {
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    -ms-animation-duration: 2s;
-  }
+.fade-in,
+.fade-out {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+}
 
-  .fade-in {
-    -webkit-animation-name: fade-in;
-    -moz-animation-name: fade-in;
-    -ms-animation-name: fade-in;
-  }
+.fade-in {
+  -webkit-animation-name: fade-in;
+  -moz-animation-name: fade-in;
+  -ms-animation-name: fade-in;
+}
 
-  .fade-out {
-    -webkit-animation-name: fade-out;
-    -moz-animation-name: fade-out;
-    -ms-animation-name: fade-out;
-  }
+.fade-out {
+  -webkit-animation-name: fade-out;
+  -moz-animation-name: fade-out;
+  -ms-animation-name: fade-out;
+}
+
+/* The starting CSS styles for the enter animation */
+.fadegr.ng-enter {
+transition:opacity 0.5s linear;
+opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fadegr.ng-enter.ng-enter-active {
+opacity:1;
+}
+.fadegr.ng-leave {
+  transition:0.5s linear all;
+  opacity:1;
+}
+.fadegr.ng-leave.ng-leave-active {
+  opacity:0;
+}
 
  /* ============= COLOR SCHEMES ============= */
 
- .dark-background,
- .medium-background {
-   color: #fff;
- }
- .dark-background {
-   background-color: #000;
- }
- .medium-background {
-   background-color: #666;
- }
- .light-background {
-   background-color: #fff;
-   color: #000;
- }
+.dark-background,
+.medium-background {
+ color: #fff;
+}
+.dark-background {
+ background-color: #000;
+}
+.medium-background {
+ background-color: #666;
+}
+.light-background {
+ background-color: #fff;
+ color: #000;
+}
 
 /* ============= CONTAINERS ============= */
 
@@ -100,29 +118,29 @@ li.inline-list-item {
 
 /* ============= TEXT ============= */
 
- .header-text {
-   font-size: 5em;
-   margin: 5% 0;
- }
+.header-text {
+ font-size: 5em;
+ margin: 5% 0;
+}
 
- .subheader-text {
-   font-size: 2.5em;
-   margin: 5% 0;
- }
+.subheader-text {
+ font-size: 2.5em;
+ margin: 5% 0;
+}
 
- .descriptive-text {
-   font-size: 1.5em;
-   margin: 2.5% 0;
- }
+.descriptive-text {
+ font-size: 1.5em;
+ margin: 2.5% 0;
+}
 
- .hidden-text {
-   display: inline-block;
-   text-indent: -9999px;
- }
+.hidden-text {
+ display: inline-block;
+ text-indent: -9999px;
+}
 
- .transparent {
-   opacity: 0;
- }
+.transparent {
+ opacity: 0;
+}
 
 /* ============= BUTTONS ============= */
 
