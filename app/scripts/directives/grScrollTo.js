@@ -17,7 +17,9 @@
   angular.module('georgeRuan')
     .directive('grScrollTo', scrollTo);
 
-  function scrollTo() {
+  scrollTo.$inject = ['Scroll'];
+
+  function scrollTo(Scroll) {
     var directive;
     directive = {
       link: link,
@@ -39,7 +41,7 @@
        * @return {Void}
        */
       function smoothScroll() {
-        disableMouseScroll();
+        Scroll.disableMouseScroll();
 
         var targetY = angular.element(document.getElementById(scope.id))[0].offsetTop;
         var duration = 1500;
@@ -48,25 +50,7 @@
           window.scrollTo(0, targetY);
         }
         else {
-          scrollElement.stop().animate({scrollTop: targetY}, duration, 'easeInOutExpo', reenableMouseScroll);
-        }
-
-        /**
-         * Disables mouse scrolling functionality.
-         * @return {Void}
-         */
-        function disableMouseScroll() {
-          angular.element(window).on('mousewheel', function(event) {
-            event.preventDefault();
-          });
-        }
-
-        /**
-         * Re-enables mouse scrolling functionality.
-         * @return {Void}
-         */
-        function reenableMouseScroll() {
-          angular.element(window).unbind('mousewheel');
+          scrollElement.stop().animate({scrollTop: targetY}, duration, 'easeInOutExpo', Scroll.reenableMouseScroll);
         }
       }
     }

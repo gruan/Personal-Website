@@ -1,18 +1,17 @@
 /**
  * Created on August 19, 2015 by George Ruan.
  *
- * Service to retain data.
+ * The userData service to retains user information.
  */
 
 (function() {
   'use strict';
-  angular
-    .module('georgeRuan')
-    .factory('userData', userData);
+  angular.module('georgeRuan')
+    .factory('UserData', UserData);
 
-  userData.$inject = ['$q'];
+  UserData.$inject = ['$q'];
 
-  function userData($q) {
+  function UserData($q) {
     var name = 'Anonymous';
 
     var userDataObj = {

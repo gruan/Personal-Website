@@ -10,9 +10,9 @@
   angular.module('georgeRuan')
     .controller('GreetingCtrl', greetingCtrl);
 
-    greetingCtrl.$inject = ['$scope', '$location', '$interval', 'userData'];
+    greetingCtrl.$inject = ['$scope', '$location', '$interval', 'UserData'];
 
-    function greetingCtrl ($scope, $location, $interval, userData) {
+    function greetingCtrl ($scope, $location, $interval, UserData) {
       var greetingsArr = ['Hello.', 'What\'s Your Name?', ''];
       var greetingsCount = 0;
       var greetingsDelay = 5000;        // in .fade-in-out (duration + delay) * 1000
@@ -28,7 +28,7 @@
        */
       function submitName() {
         var username = $scope.name || 'Anonymous';
-        userData.setName(username);
+        UserData.setName(username);
         $location.path('home');
       }
 

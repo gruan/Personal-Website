@@ -10,10 +10,10 @@
   angular.module('georgeRuan')
     .controller('HomeCtrl', homeCtrl);
 
-    homeCtrl.$inject = ['$scope', '$location', '$anchorScroll', 'userData'];
+    homeCtrl.$inject = ['$scope', '$location', '$anchorScroll', 'UserData'];
 
-    function homeCtrl ($scope, $location, $anchorScroll, userData) {
-      userData.getName().then(setName);
+    function homeCtrl ($scope, $location, $anchorScroll, UserData) {
+      UserData.getName().then(setName);
 
       /**
        * Sets the user's name.
