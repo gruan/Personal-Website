@@ -144,11 +144,10 @@ li.inline-list-item {
 
 /* ============= BUTTONS ============= */
 
-.generic-btn {
+.global-btn {
   border: none;
   box-sizing: border-box;
   background: none;
-  cursor: pointer;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 1em;
@@ -159,9 +158,16 @@ li.inline-list-item {
   font-weight: 700;
   outline: none;
   position: relative;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.global-btn,
+.global-btn:link,
+.global-btn:visited,
+.global-btn:hover,
+.global-btn:active {
+  text-decoration: none;
 }
 .small-btn {
   padding: 1.5em 2em;
@@ -188,16 +194,4 @@ li.inline-list-item {
 .dark-btn:active {
   color: #fff;
   background: #000;
-}
-.light-btn,
-.light-btn:link,
-.light-btn:visited,
-.light-btn:hover,
-.light-btn:active,
-.dark-btn,
-.dark-btn:link,
-.dark-btn:visited,
-.dark-btn:hover,
-.dark-btn:active {
-  text-decoration: none;
 }
