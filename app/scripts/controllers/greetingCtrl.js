@@ -15,7 +15,7 @@
     function greetingCtrl ($scope, $location, $interval, UserData) {
       var greetingsArr = ['Hello.', 'What\'s Your Name?', ''];
       var greetingsCount = 0;
-      var greetingsDelay = 5000;        // in .fade-in-out (duration + delay) * 1000
+      var greetingsDelay = 4000;        // in .fade-in-out (duration + delay) * 1000
       $scope.greeting = greetingsArr[0];
 
       $scope.name = '';

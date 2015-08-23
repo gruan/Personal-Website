@@ -8,8 +8,10 @@
 
 @keyframes fade-in-out {
   0% {opacity: 0;}
+  10% {opacity: 0;}
   40% {opacity: 1;}
   60% {opacity: 1;}
+  90% {opacity: 0;}
   100% {opacity: 0;}
 }
 
@@ -23,26 +25,30 @@
   100% {opacity: 0}
 }
 
+/* IF THE DURATIONS ARE MODIFIED HERE THEY ALSO NEED TO BE MODIFIED IN
+   THE GREETING CONTROLLER: DURATION + DELAY */
 .fade-in-out {
   -webkit-animation-name: fade-in-out;
-  -webkit-animation-duration: 4s;
+  -webkit-animation-duration: 3s;
   -webkit-animation-delay: 1s;
   -webkit-animation-iteration-count: 2;
   -moz-animation-name: fade-in-out;
-  -moz-animation-duration: 4s;
+  -moz-animation-duration: 3s;
   -moz-animation-delay: 1s;
   -moz-animation-iteration-count: 2;
   -ms-animation-name: fade-in-out;
-  -ms-animation-duration: 4s;
+  -ms-animation-duration: 3s;
   -ms-animation-delay: 1s;
   -ms-animation-iteration-count: 2;
 }
 
+
+/* DURATION SHOULD BE FADE-IN-OUT'S DURATION DIVIDED BY 3 */
 .fade-in,
 .fade-out {
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -ms-animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
 }
 
 .fade-in {
@@ -62,7 +68,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  bottom: 0;
 }
 
  /* ============= COLOR SCHEMES ============= */
