@@ -56,26 +56,14 @@
   -moz-animation-name: fade-out;
   -ms-animation-name: fade-out;
 }
-/*
-.fadegr.ng-enter {
-transition: opacity 2s linear 3s;
-opacity:0;
-}
 
-.fadegr.ng-enter.ng-enter-active {
-opacity:1;
+.page-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
 }
-
-.fadegr.ng-leave {
-  transition: opacity 2s linear;
-  opacity: 1;
-}
-
-.fadegr.ng-leave.ng-leave-active {
-  opacity: 0;
-}
-*/
-
 
  /* ============= COLOR SCHEMES ============= */
 
