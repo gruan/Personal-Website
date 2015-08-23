@@ -1,7 +1,7 @@
 /**
  * Created by George Ruan on August 22, 2015.
  *
- * page-fade defines the fade in and fade out animation for page transitions.
+ * Page-fade defines the fade in and fade out animation for page transitions.
  *
  * To use: add the page-fade class to the element.
  *
