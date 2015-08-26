@@ -12,16 +12,22 @@
   UserData.$inject = ['$q'];
 
   function UserData($q) {
-    var name = 'Anonymous';
+    var name = '',
+        nameNotEntered = true;
 
     var userDataObj = {
       getName: function() {
+        if(!nameNotEntered) {
+          name = name || 'Anonymous';
+        }
+
         return $q(function(resolve){
           resolve(name);
         });
       },
       setName: function(userName) {
         name = userName;
+        nameNotEntered = false;
         return $q(function(resolve) {
           resolve(name);
         });

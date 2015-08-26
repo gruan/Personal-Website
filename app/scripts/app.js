@@ -12,10 +12,6 @@
     .config(function($routeProvider) {
       $routeProvider
         .when('/', {
-          templateUrl: 'views/greeting.html',
-          controller: 'GreetingCtrl'
-        })
-        .when('/home', {
           templateUrl: 'views/home.html',
           controller: 'HomeCtrl'
         })

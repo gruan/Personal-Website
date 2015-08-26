@@ -10,17 +10,50 @@
   angular.module('georgeRuan')
     .controller('HomeCtrl', homeCtrl);
 
-    homeCtrl.$inject = ['$scope', 'UserData'];
+    homeCtrl.$inject = ['$scope', '$interval', 'UserData'];
 
-    function homeCtrl ($scope, UserData) {
-      UserData.getName().then(setName);
+    function homeCtrl ($scope, $interval, UserData) {
+      var greetingsArr = ['Hello.', 'What\'s Your Name?', ''];
+      var greetingsCount = 0;
+      var greetingsDelay = 4000;        // in .fade-in-out (duration + delay) * 1000
+      $scope.greeting = greetingsArr[0];
+
+      $scope.showGreeting = true;
+
+      $scope.input = {
+        // name: ''
+      };
+
+      $scope.submitName = submitName;
+
+      UserData.getName().then(setLocalName);
+      $interval(nextGreeting, greetingsDelay, greetingsArr.length - 1);
 
       /**
-       * Sets the user's name.
+       * Sets the user's local name.
        * @param {String} name User's name.
        */
-      function setName (name) {
-        $scope.name = name;
+      function setLocalName (name) {
+        $scope.input.name = name;
+      }
+
+      /**
+       * Sets the local user name and changes the page to the Home Screen
+       * @return {void}
+       */
+      function submitName() {
+        UserData.setName($scope.input.name);
+        $scope.showGreeting = false;
+      }
+
+      /**
+       * Sets the greeting to the next possible one.
+       * @return {void}
+       */
+      function nextGreeting() {
+        if(greetingsCount < greetingsArr.length) {
+          $scope.greeting = greetingsArr[++greetingsCount];
+        }
       }
     }
 })();
