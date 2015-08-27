@@ -1,5 +1,5 @@
 <!-- GREETING -->
-<section id="greeting" class="container-fluid dark-background page-fade" ng-if="showGreeting">
+<section id="greeting" class="container-fluid dark-background page-fade" ng-if="showGreetingPage">
     <div class="container-table text-center ">
         <div class="table-cell-center">
             <div class="row" ng-if="greeting">
@@ -18,7 +18,7 @@
 </section>
 
 <!-- HOME -->
-<div id="home" class="page-fade" ng-if="!showGreeting">
+<div id="home" class="page-fade" ng-if="!showGreetingPage">
     <!-- NAVBAR -->
     <gr-nav-bar></gr-nav-bar>
 

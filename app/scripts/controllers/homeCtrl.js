@@ -18,7 +18,7 @@
       var greetingsDelay = 4000;        // in .fade-in-out (duration + delay) * 1000
       $scope.greeting = greetingsArr[0];
 
-      $scope.showGreeting = true;
+      $scope.showGreetingPage = true;
 
       $scope.input = {
         // name: ''
@@ -30,7 +30,7 @@
       $interval(nextGreeting, greetingsDelay, greetingsArr.length - 1);
 
       /**
-       * Sets the user's local name.
+       * Sets the local user's name.
        * @param {String} name User's name.
        */
       function setLocalName (name) {
