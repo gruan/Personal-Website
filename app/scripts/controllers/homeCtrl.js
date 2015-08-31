@@ -43,7 +43,7 @@
        */
       function submitName() {
         UserData.setName($scope.input.name);
-        $scope.showGreeting = false;
+        $scope.showGreetingPage = false;
       }
 
       /**
