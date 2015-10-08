@@ -22,7 +22,7 @@
     var directive;
     directive = {
       link: link,
-      templateUrl: '/scripts/directives/grNavBar/grNavBar.html',
+      templateUrl: 'scripts/directives/grNavBar/grNavBar.html',
       restrict: 'E'
     };
 
