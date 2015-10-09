@@ -18,6 +18,7 @@
       var greetingsDelay = 4000;        // in .fade-in-out (duration + delay) * 1000
       $scope.greeting = greetingsArr[0];
 
+      // Set to false for debugging. True for greetings animation
       $scope.showGreetingPage = true;
 
       $scope.input = {
