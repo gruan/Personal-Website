@@ -27,6 +27,12 @@
 
       $scope.submitName = submitName;
 
+      $scope.links = {
+        github: 'https://github.com/gruan',
+        linkedin: 'https://www.linkedin.com/in/gruan',
+        resume: 'https://drive.google.com/file/d/0BxTOfbWmV3tWdWNQQm1NT19IMUk/view?usp=sharing'
+      }
+
       UserData.getName().then(setLocalName);
       $interval(nextGreeting, greetingsDelay, greetingsArr.length - 1);
 
