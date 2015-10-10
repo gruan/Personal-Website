@@ -23,7 +23,10 @@
     directive = {
       link: link,
       templateUrl: 'scripts/directives/grNavBar/grNavBar.html',
-      restrict: 'E'
+      restrict: 'E',
+      scope: {
+        links: '='
+      }
     };
 
     return directive;

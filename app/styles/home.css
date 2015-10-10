@@ -55,11 +55,11 @@ nav li.inline-list-item:last-child {
 }
 
 .nav-text,
+.nav-text:link,
 .nav-text:visited {
   color: #fff;
 }
 
-.nav-text:link,
 .nav-text:hover,
 .nav-text:active {
   color: #666;
