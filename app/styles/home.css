@@ -17,14 +17,6 @@ nav {
   z-index: 1;
 }
 
-.container-bottom {
-  padding: 20% 20%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 .nav-rollover {
   color: #00CCB0;
   opacity: 1;
@@ -33,6 +25,17 @@ nav {
   top: 0;
   left: -30px;
   bottom: 0;
+}
+
+.nav-logo {
+  width: 4em;
+  height: 4em;
+  margin: 0 auto;
+}
+
+.nav-logo img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 nav li.inline-list-item {
