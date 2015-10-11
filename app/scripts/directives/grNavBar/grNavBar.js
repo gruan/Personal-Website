@@ -31,7 +31,9 @@
 
     return directive;
 
-    function link() {
+    function link(scope) {
+      scope.logo = 'https://cloud.githubusercontent.com/assets/4809816/10415229/1f7e0b0e-6fb6-11e5-9b1e-b6d054c3feef.png';
+
       // Constants
       var SLIDE_IN_POSITION = 0,
           SLIDE_OUT_POSITION = -277,
