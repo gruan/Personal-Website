@@ -20,7 +20,7 @@
 <!-- HOME -->
 <div id="home" class="page-fade" ng-if="!showGreetingPage">
     <!-- NAVBAR -->
-    <gr-nav-bar links=links></gr-nav-bar>
+    <!--gr-nav-bar links=links></gr-nav-bar>-->
 
     <!-- HEADER -->
     <header>
@@ -68,26 +68,29 @@
     </section>
 
     <!-- PORTFOLIO SECTION -->
-    <!-- When adding items, the image must have the aspect ratio -->
+    <!-- When adding items, the image must have the aspect ratio 1750x850 -->
     <section id="portfolio">
-        <div class="row">
-            <div class="col-sm-12">
-                <a ng-href="{{links.mogaocaves}}" target="_blank">
-                    <div class="portfolio-item">
-                        <img src="../../img/portfolio/mogaocaves_1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-item-caption">
-                            <div class="portfolio-item-caption-content">
-                                <div class="project-affiliation text-faded">
-                                    Dunhuang Research Academy
-                                </div>
-                                <div class="project-name">
-                                    Mogao Caves
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 no-padding">
+                    <a ng-href="{{links.mogaocaves}}" target="_blank">
+                        <div class="portfolio-item">
+                            <img src="../../img/portfolio/mogaocaves_1.jpg" class="img-responsive" alt="">
+                            <div class="portfolio-item-caption">
+                                <div class="portfolio-item-caption-content">
+                                    <div class="project-affiliation text-faded">
+                                        Dunhuang Research Academy
+                                    </div>
+                                    <div class="project-name">
+                                        Mogao Caves
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
+            <!-- To add new project just copy the entire above except the <section> and container-fluid and paste. -->
         </div>
     </section>
 
