@@ -173,7 +173,8 @@ section .container-content {
 
 #mogaocaves {
   background-size: cover;
-  background-image: url(../../img/portfolio/mogaocaves_1.jpg);
+  /* background-image: url(../../img/portfolio/mogaocaves_1.jpg); Local */
+  background-image: url(https://cloud.githubusercontent.com/assets/4809816/12335890/18047d98-bac7-11e5-961a-b385ad705030.jpg);
   background-position: center center;
 }
 
