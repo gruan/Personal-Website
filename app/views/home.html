@@ -68,18 +68,27 @@
     </section>
 
     <!-- PORTFOLIO SECTION -->
+    <!-- When adding items, the image must have the aspect ratio -->
     <section id="portfolio">
-        <a id="mogaocaves" ng-href="{{links.mogaocaves}}" target="_blank">
-          <div class="container-fluid">
-              <div class="container-content">
-                <h1 class="header-text">
-                    Mogao <br>
-                    Caves <br>
-                    in VR.
-                </h1>
-              </div>
-          </div>
-        </a>
+        <div class="row">
+            <div class="col-sm-12">
+                <a ng-href="{{links.mogaocaves}}" target="_blank">
+                    <div class="portfolio-item">
+                        <img src="../../img/portfolio/mogaocaves_1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-item-caption">
+                            <div class="portfolio-item-caption-content">
+                                <div class="project-affiliation text-faded">
+                                    Dunhuang Research Academy
+                                </div>
+                                <div class="project-name">
+                                    Mogao Caves
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- CONTACT SECTION -->
