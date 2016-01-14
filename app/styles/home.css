@@ -171,6 +171,12 @@ section .container-content {
     opacity: 1;
 }
 
+#mogaocaves {
+  background-size: cover;
+  background-image: url(../../img/portfolio/mogaocaves_1.jpg);
+  background-position: center center;
+}
+
 /* ============= #CONTACT ============= */
 
 #contact::before {

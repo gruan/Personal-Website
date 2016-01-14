@@ -19,7 +19,7 @@
       $scope.greeting = greetingsArr[0];
 
       // Set to false for debugging. True for greetings animation
-      $scope.showGreetingPage = false;
+      $scope.showGreetingPage = true;
 
       $scope.input = {
         // name: ''

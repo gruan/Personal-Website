@@ -20,7 +20,7 @@
 <!-- HOME -->
 <div id="home" class="page-fade" ng-if="!showGreetingPage">
     <!-- NAVBAR -->
-    <!--gr-nav-bar links=links></gr-nav-bar>-->
+    <gr-nav-bar links=links></gr-nav-bar>
 
     <!-- HEADER -->
     <header>
@@ -68,8 +68,19 @@
     </section>
 
     <!-- PORTFOLIO SECTION -->
-    <!-- When adding items, the image must have the aspect ratio 1750x850 -->
     <section id="portfolio">
+        <div id="mogaocaves" class="container-fluid">
+            <div class="container-content">
+                <h1 class="header-text">
+                  Mogao <br>
+                  Caves<br>
+                  In VR.
+                </h1>
+                <a ng-href="{{links.mogaocaves}}" target="_blank" class="global-btn small-btn light-btn">Learn More.</a>
+            </div>
+        </div>
+
+        <!-- When adding items, the image must have the aspect ratio 1750x850
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 no-padding">
@@ -90,8 +101,8 @@
                     </a>
                 </div>
             </div>
-            <!-- To add new project just copy the entire above except the <section> and container-fluid and paste. -->
         </div>
+        -->
     </section>
 
     <!-- CONTACT SECTION -->
