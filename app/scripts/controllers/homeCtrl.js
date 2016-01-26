@@ -31,7 +31,7 @@
         github: 'https://github.com/gruan',
         linkedin: 'https://www.linkedin.com/in/gruan',
         logo: 'https://cloud.githubusercontent.com/assets/4809816/10415229/1f7e0b0e-6fb6-11e5-9b1e-b6d054c3feef.png',
-        resume: 'https://drive.google.com/file/d/0BxTOfbWmV3tWeXhCUUlRVDY1a00/view?usp=sharing',
+        resume: 'https://drive.google.com/file/d/0BxTOfbWmV3tWSU12WXUyUml3SmM/view?usp=sharing',
         mogaocaves: 'http://www.mogaocaves.xyz'
       };
 
