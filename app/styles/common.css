@@ -221,6 +221,7 @@ li.inline-list-item {
 @media only screen and (max-device-width: 480px) {
   .light-btn:hover,
   .light-btn:active {
+    color: #fff;
     background: none;
   }
 }
@@ -238,6 +239,7 @@ li.inline-list-item {
 @media only screen and (max-device-width: 480px) {
   .dark-btn:hover,
   .dark-btn:active {
+    color: #000;
     background: none;
   }
 }
