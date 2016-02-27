@@ -20,7 +20,7 @@
 <!-- HOME -->
 <div id="home" class="page-fade" ng-if="!showGreetingPage">
     <!-- NAVBAR -->
-    <gr-nav-bar links=links></gr-nav-bar>
+    <gr-nav-bar ng-if="device=='desktop'" links=links></gr-nav-bar>
 
     <!-- HEADER -->
     <header>

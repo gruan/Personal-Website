@@ -13,20 +13,21 @@
     homeCtrl.$inject = ['$scope', '$interval', 'UserData'];
 
     function homeCtrl ($scope, $interval, UserData) {
+      /* ------ Greeting Variables ----- */
       var greetingsArr = ['Hello.', 'What\'s Your Name?', ''];
       var greetingsCount = 0;
       var greetingsDelay = 4000;        // in .fade-in-out (duration + delay) * 1000
       $scope.greeting = greetingsArr[0];
 
       // Set to false for debugging. True for greetings animation
-      $scope.showGreetingPage = true;
+      $scope.showGreetingPage = false;
 
+      /* ----- Input Variables ----- */
       $scope.input = {
         // name: ''
       };
 
-      $scope.submitName = submitName;
-
+      /* ----- Links ----- */
       $scope.links = {
         github: 'https://github.com/gruan',
         linkedin: 'https://www.linkedin.com/in/gruan',
@@ -35,15 +36,34 @@
         mogaocaves: 'http://www.mogaocaves.xyz'
       };
 
-      UserData.getName().then(setLocalName);
-      $interval(nextGreeting, greetingsDelay, greetingsArr.length - 1);
+      /* ----- User Data ----- */
+      $scope.device = '';
+
+      /* ----- Functions ----- */
+      /**
+       * Sets the local device.
+       * @param String device User's device. 'mobile', 'tablet', 'desktop'
+       */
+      function setLocalDevice(device) {
+        $scope.device = device;
+      }
 
       /**
        * Sets the local user's name.
-       * @param {String} name User's name.
+       * @param String name User's name.
        */
       function setLocalName (name) {
         $scope.input.name = name;
+      }
+
+      /**
+       * Sets the greeting to the next possible one.
+       * @return {void}
+       */
+      function nextGreeting() {
+        if(greetingsCount < greetingsArr.length) {
+          $scope.greeting = greetingsArr[++greetingsCount];
+        }
       }
 
       /**
@@ -56,13 +76,20 @@
       }
 
       /**
-       * Sets the greeting to the next possible one.
-       * @return {void}
+       * Determines whether the navigation bar should be shown
+       * @return Boolean True if desktop. False otherwise.
        */
-      function nextGreeting() {
-        if(greetingsCount < greetingsArr.length) {
-          $scope.greeting = greetingsArr[++greetingsCount];
-        }
+      function showNav() {
+        return device == 'desktop';
       }
+
+      /* ------ Scoped Functions ----- */
+      $scope.submitName = submitName;
+
+      /* ------ Runtime ------ */
+      UserData.getDevice().then(setLocalDevice);
+
+      UserData.getName().then(setLocalName);
+      $interval(nextGreeting, greetingsDelay, greetingsArr.length - 1);
     }
 })();
