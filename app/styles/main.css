@@ -18,6 +18,31 @@
    position: relative;
  }
 
+ @media only screen and (min-width:480px){
+ /* styles for mobile browsers smaller than 480px; (iPhone) */
+   body{
+     font-size: 10px;
+   }
+ }
+ @media only screen and (min-width:768px){
+ /* default iPad screens */
+   body{
+     font-size: 12px;
+   }
+ }
+@media only screen and (min-width:960px){
+/* styles for browsers larger than 960px; */
+  body {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width:1440px){
+/* styles for browsers larger than 1440px; */
+  body{
+    font-size: 20px;
+  }
+}
+
  h1 {
    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-weight: 400;

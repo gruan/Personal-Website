@@ -8,7 +8,7 @@
             <div class="row" ng-if="!greeting">
                 <form ng-submit="submitName()">
                     <label for="name" ng-hide="true">Name</label>
-                    <input type="text" class="fade-in greeting-text underline-input" id="name" autocomplete="off" ng-model="input.name"></input>
+                    <input type="text" class="fade-in greeting-text underline-input" id="name" autocomplete="off" ng-model="input.name" autofocus></input>
 
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
