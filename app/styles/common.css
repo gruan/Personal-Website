@@ -218,6 +218,12 @@ li.inline-list-item {
   color: #000;
   background: #fff;
 }
+@media only screen and (max-device-width: 480px) {
+  .light-btn:hover,
+  .light-btn:active {
+    background: none;
+  }
+}
 .dark-btn,
 .dark-btn:link,
 .dark-btn:visited {
@@ -228,4 +234,10 @@ li.inline-list-item {
 .dark-btn:active {
   color: #fff;
   background: #000;
+}
+@media only screen and (max-device-width: 480px) {
+  .dark-btn:hover,
+  .dark-btn:active {
+    background: none;
+  }
 }
