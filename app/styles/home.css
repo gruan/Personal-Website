@@ -171,10 +171,17 @@ section .container-content {
     opacity: 1;
 }
 
-#mogaocaves {
+#mogaoCaves {
   background-size: cover;
-  /* background-image: url(../../img/portfolio/mogaocaves_1.jpg); Local */
+  /* background-image: url(../../img/portfolio/mogao_caves.jpg); Local */
   background-image: url(https://cloud.githubusercontent.com/assets/4809816/12335890/18047d98-bac7-11e5-961a-b385ad705030.jpg);
+  background-position: center center;
+}
+
+#nobe-website {
+  background-size: cover;
+  /*background-image: url(../../img/portfolio/nobe_website.png); Local */
+  background-image: url(https://cloud.githubusercontent.com/assets/4809816/18233333/e2873fb6-72a9-11e6-9b83-3cb48d548db4.png);
   background-position: center center;
 }
 
