@@ -1,0 +1,245 @@
+/**
+ * Created on August 18, 2015 by George Ruan.
+ *
+ * Stylesheet for common styles.
+ */
+
+ /* ============= ANIMATIONS ============= */
+
+@keyframes fade-in-out {
+  0% {opacity: 0;}
+  10% {opacity: 0;}
+  40% {opacity: 1;}
+  60% {opacity: 1;}
+  90% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+@keyframes fade-in {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@keyframes fade-out {
+  0% {opacity: 1}
+  100% {opacity: 0}
+}
+
+/* IF THE DURATIONS ARE MODIFIED HERE THEY ALSO NEED TO BE MODIFIED IN
+   THE GREETING CONTROLLER: DURATION + DELAY */
+.fade-in-out {
+  -webkit-animation-name: fade-in-out;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 2;
+  -moz-animation-name: fade-in-out;
+  -moz-animation-duration: 3s;
+  -moz-animation-delay: 1s;
+  -moz-animation-iteration-count: 2;
+  -ms-animation-name: fade-in-out;
+  -ms-animation-duration: 3s;
+  -ms-animation-delay: 1s;
+  -ms-animation-iteration-count: 2;
+}
+
+
+/* DURATION SHOULD BE FADE-IN-OUT'S DURATION DIVIDED BY 3 */
+.fade-in,
+.fade-out {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+}
+
+.fade-in {
+  -webkit-animation-name: fade-in;
+  -moz-animation-name: fade-in;
+  -ms-animation-name: fade-in;
+}
+
+.fade-out {
+  -webkit-animation-name: fade-out;
+  -moz-animation-name: fade-out;
+  -ms-animation-name: fade-out;
+}
+
+.page-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+ /* ============= COLOR SCHEMES ============= */
+
+.dark-background,
+.medium-background {
+ color: #fff;
+}
+.dark-background {
+ background-color: #000;
+}
+.medium-background {
+ background-color: #666;
+}
+.light-background {
+ background-color: #fff;
+ color: #000;
+}
+
+/* ============= CONTAINERS ============= */
+
+/* Creates the slanted border */
+.container-slanted:before {
+  content: "";
+  width: 100%;
+  height: 0;
+  padding-bottom: 8%;
+  margin-top: -4%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-transform: skewY(4deg);
+  -moz-transform: skewY(4deg);
+  -o-transform: skewY(4deg);
+  -ms-transform: skewY(4deg);
+  transform: skewY(4deg)
+}
+
+.container-top {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+
+.container-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container-bottom {
+  padding: 20% 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.table-cell-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.full-height {
+  height: 100%;
+}
+
+/* ============= PLACEMENT ============= */
+
+li.inline-list-item {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.no-padding {
+ padding: 0;
+}
+
+/* ============= TEXT ============= */
+
+.header-text {
+ font-size: 5em;
+ margin: 5% 0;
+}
+
+.subheader-text {
+ font-size: 2.5em;
+ margin: 5% 0;
+}
+
+.descriptive-text {
+ font-size: 1.5em;
+ margin: 2.5% 0;
+}
+
+.hidden-text {
+ display: inline-block;
+ text-indent: -9999px;
+}
+
+.transparent {
+ opacity: 0;
+}
+
+/* ============= BUTTONS ============= */
+
+.global-btn {
+  border: none;
+  box-sizing: border-box;
+  background: none;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 1em;
+  display: inline-block;
+  margin: 2% 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.global-btn,
+.global-btn:link,
+.global-btn:visited,
+.global-btn:hover,
+.global-btn:active {
+  text-decoration: none;
+}
+.small-btn {
+  padding: 1.5em 2em;
+  min-width: 175px;
+}
+.light-btn,
+.light-btn:link,
+.light-btn:visited {
+  border: 3px solid #fff;
+  color: #fff;
+}
+.light-btn:hover,
+.light-btn:active {
+  color: #000;
+  background: #fff;
+}
+@media only screen and (max-device-width: 480px) {
+  .light-btn:hover,
+  .light-btn:active {
+    color: #fff;
+    background: none;
+  }
+}
+.dark-btn,
+.dark-btn:link,
+.dark-btn:visited {
+  border: 3px solid #000;
+  color: #000;
+}
+.dark-btn:hover,
+.dark-btn:active {
+  color: #fff;
+  background: #000;
+}
+@media only screen and (max-device-width: 480px) {
+  .dark-btn:hover,
+  .dark-btn:active {
+    color: #000;
+    background: none;
+  }
+}

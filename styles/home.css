@@ -1,0 +1,201 @@
+/**
+ * Created on August 19, 2015 by George Ruan.
+ *
+ * Stylesheet for Home Page.
+ */
+
+/* ============= NAVBAR ============= */
+nav {
+  border-left: 3px solid #00CCB0;
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  right: -277px;
+  bottom: 0;
+  transition: right .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 280px;
+  z-index: 1;
+}
+
+.nav-rollover {
+  color: #00CCB0;
+  opacity: 1;
+  padding: 0 3px 0 10px;
+  position: absolute;
+  top: 0;
+  left: -30px;
+  bottom: 0;
+}
+
+.nav-logo {
+  width: 4em;
+  height: 4em;
+  margin: 0 auto;
+}
+
+.nav-logo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+nav li.inline-list-item {
+   margin: 0 3%;
+}
+nav li.inline-list-item:first-child {
+  margin-left: 0;
+}
+nav li.inline-list-item:last-child {
+  margin-right: 0;
+}
+
+.nav-text {
+  border-bottom: none;
+  font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  transition: color .3s linear;
+}
+
+.nav-text,
+.nav-text:link,
+.nav-text:visited {
+  color: #fff;
+}
+
+.nav-text:hover,
+.nav-text:active {
+  color: #666;
+}
+
+.nav-icon {
+  font-size: 1.5em;
+  transition: color .2s linear;
+}
+
+.nav-icon,
+.nav-icon:link,
+.nav-icon:visited {
+  color: #00CCB0;
+}
+
+.nav-icon:hover,
+.nav-icon:active {
+  color: #007A6A;
+}
+
+.table-cell-center > li {
+  margin-bottom: 5px;
+}
+
+/* ============= HEADER ============= */
+
+header .container-header {
+  margin: 13% 0 0% 5%;
+  height: 4em;
+  width: 4em;
+  position: relative;
+}
+
+header .container-header img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+header .container-content {
+  margin: 7% 0 15% 5%;
+  position: relative;
+}
+
+/* ============= SECTIONS ============= */
+
+section .container-content {
+  margin: 0 0 15% 5%;
+  position: relative;
+}
+
+/* ============= #ABOUT ============= */
+
+#about::before {
+  background-color: #fff;
+}
+
+/* ============= #PORTFOLIO ============= */
+
+.portfolio-item {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+.portfolio-item .portfolio-item-caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+
+    background: rgba(141,110,99,.9);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.portfolio-item .portfolio-item-caption .portfolio-item-caption-content .project-affiliation,
+.portfolio-item .portfolio-item-caption .portfolio-item-caption-content .project-name {
+    padding: 0 15px;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.portfolio-item .portfolio-item-caption .portfolio-item-caption-content .project-affiliation {
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+.portfolio-item .portfolio-item-caption .portfolio-item-caption-content .project-name {
+    font-size: 3.5em;
+}
+
+.portfolio-item:hover .portfolio-item-caption {
+    opacity: 1;
+}
+
+#mogaoCaves {
+  background-size: cover;
+  /* background-image: url(../../img/portfolio/mogao_caves.jpg); Local */
+  background-image: url(https://cloud.githubusercontent.com/assets/4809816/12335890/18047d98-bac7-11e5-961a-b385ad705030.jpg);
+  background-position: center center;
+}
+
+#nobe-website {
+  background-size: cover;
+  /*background-image: url(../../img/portfolio/nobe_website.png); Local */
+  background-image: url(https://cloud.githubusercontent.com/assets/4809816/18233333/e2873fb6-72a9-11e6-9b83-3cb48d548db4.png);
+  background-position: center center;
+}
+
+/* ============= #CONTACT ============= */
+
+#contact::before {
+  background-color:#000;
+}
+#contact li.inline-list-item {
+   margin: 0 .5%;
+}
+#contact li.inline-list-item:first-child {
+  margin-left: 0;
+}
+#contact li.inline-list-item:last-child {
+  margin-right: 0;
+}

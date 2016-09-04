@@ -1,0 +1,142 @@
+<!-- GREETING -->
+<section id="greeting" class="container-fluid dark-background page-fade" ng-if="showGreetingPage">
+    <div class="container-table text-center ">
+        <div class="table-cell-center">
+            <div class="row" ng-if="greeting">
+                <h1 class="fade-in-out transparent greeting-text">{{greeting}}</h1>
+            </div>
+            <div class="row" ng-if="!greeting">
+                <form ng-submit="submitName()">
+                    <label for="name" ng-hide="true">Name</label>
+                    <input type="text" class="fade-in greeting-text underline-input" id="name" autocomplete="off" ng-model="input.name" autofocus></input>
+
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOME -->
+<div id="home" class="page-fade" ng-if="!showGreetingPage">
+    <!-- NAVBAR -->
+    <gr-nav-bar ng-if="device=='desktop'" links=links></gr-nav-bar>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container-fluid dark-background">
+            <div class="container-header">
+                <img ng-src='{{links.logo}}' alt='Logo'>
+            </div>
+            <div class="container-content">
+                <h1 class="header-text">
+                  Nice to <br>
+                  Meet You <br>
+                  {{input.name}}.
+                </h1>
+                <a href="#/" class="global-btn small-btn light-btn" gr-scroll-to="'about'">Get To Know Me.</a>
+            </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="container-slanted">
+        <div class="container-fluid light-background">
+            <div class="container-content">
+                <h1 class="header-text">
+                    I Design <br>
+                    And Build <br>
+                    Applications.
+                </h1>
+                <h2 class="subheader-text">
+                  My name is George Ruan<br>
+                  and I am a full-stack <br>
+                  developer.
+                </h2>
+                <p class="descriptive-text">
+                  I am currently pursuing a Bachelor's Degree <br>
+                  in Computer Science as a Junior at the <br>
+                  University of Illinois at Urbana-Champaign.
+                </p>
+                <p class="descriptive-text">
+                  Currently, I am interested in projects, <br>
+                  research, and internships working with <br>
+                  Machine Learning.
+                </p>
+                <a href="#/" class="page-scroll global-btn small-btn dark-btn" gr-scroll-to="'portfolio'">Dive Into My Work.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio">
+        <div id="mogaoCaves" class="container-fluid">
+            <div class="container-content">
+                <h1 class="header-text">
+                  Mogao <br>
+                  Caves<br>
+                  In VR.
+                </h1>
+                <a ng-href="{{links.mogaoCaves}}" target="_blank" class="global-btn small-btn light-btn">Learn More.</a>
+            </div>
+        </div>
+
+        <div id="nobe-website" class="container-fluid light-background">
+            <div class="container-content">
+                <h1 class="header-text">
+                  NOBE <br>
+                  Tech <br>
+                  Chair.
+                </h1>
+                <a ng-href="{{links.nobeWebsite}}" target="_blank" class="global-btn small-btn dark-btn">Learn More.</a>
+            </div>
+        </div>
+
+        <!-- When adding items, the image must have the aspect ratio 1750x850
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 no-padding">
+                    <a ng-href="{{links.mogaocaves}}" target="_blank">
+                        <div class="portfolio-item">
+                            <img src="../../img/portfolio/mogaocaves_1.jpg" class="img-responsive" alt="">
+                            <div class="portfolio-item-caption">
+                                <div class="portfolio-item-caption-content">
+                                    <div class="project-affiliation text-faded">
+                                        Dunhuang Research Academy
+                                    </div>
+                                    <div class="project-name">
+                                        Mogao Caves
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        -->
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container-fluid dark-background">
+            <div class="container-content">
+                <h1 class="header-text">
+                    Interested? <br>
+                    Let's Get <br>
+                    Coffee.
+                </h1>
+                <a href="mailto:ruan.george@gmail.com" class="global-btn small-btn light-btn">Set A Date.</a>
+                <h2 class="subheader-text">
+                  Take my resume on the run <br>
+                  and follow me on Github <br>
+                  and LinkedIn.
+                </h2>
+                <ul>
+                    <li class="inline-list-item"><a ng-href="{{links.resume}}" target="_blank" class="global-btn small-btn light-btn">Resume</a></li>
+                    <li class="inline-list-item"><a ng-href="{{links.github}}" target="_blank" class="global-btn small-btn light-btn">Github</a></li>
+                    <li class="inline-list-item"><a ng-href="{{links.linkedin}}" target="_blank" class="global-btn small-btn light-btn">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>

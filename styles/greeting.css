@@ -1,0 +1,40 @@
+/**
+ * Created on August 18, 2015 by George Ruan.
+ *
+ * Stylesheet for Greeting Page.
+ */
+
+ /* ============= CONTAINERS ============= */
+
+#greeting {
+  height: 100%;
+}
+
+ /* ============= TEXT ============= */
+
+.greeting-text{
+  font-size: 3.5em;
+}
+
+ /* ============= FORM ============= */
+
+#greeting input,
+#greeting input:focus {
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+}
+
+.underline-input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: #fff;
+}
+
+#greeting button[type="submit"] {
+  position: absolute;
+  left: -999999px;
+  width: 1px;
+  height: 1px;
+}
